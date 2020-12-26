@@ -15,17 +15,34 @@ struct StateDetailView: View {
         
     var body: some View {
         
-        BarChartView(data: ChartData(values: stateDetailVM.dataPoints), title: statesDictionary[state.state]!, form: ChartForm.extraLarge) 
-        
-//        List(stateDetailVM.stateDetails, id: \.date) { dailyInfo in
-//            HStack {
-//                Text("\(stateDetailVM.convertToDate(date: dailyInfo.date))  --- ")
-//                Text("\(dailyInfo.positiveIncrease!)")
-//            }
-//        }
-        .onAppear(perform: {
-            stateDetailVM.getStateDetails(state: state.state)
+        VStack {
+            BarChartView(data: ChartData(values: stateDetailVM.dataPoints), title: statesDictionary[state.state]!, form: ChartForm.extraLarge)
+                .padding()
+            
+            Divider()
+            
+            HStack {
+                Text("New Cases per Day")
+                    .font(.title)
+                    .fontWeight(.black)
+                    .padding()
+                Spacer()
+            }
+            
+            List(stateDetailVM.stateDetails.prefix(30), id: \.date) { dailyInfo in
+                HStack {
+                
+                    Text("\(stateDetailVM.convertToDate(date: dailyInfo.date)): ")
+                        .fontWeight(.bold)
+                        .frame(width: 110, height: 35, alignment: .leading)
+                    Text("\(dailyInfo.positiveIncrease!)")
+                }
+            }
+            .onAppear(perform: {
+                stateDetailVM.getStateDetails(state: state.state)
         })
+        }
+        .navigationBarTitle(state.state, displayMode: .inline)
     }
 }
 

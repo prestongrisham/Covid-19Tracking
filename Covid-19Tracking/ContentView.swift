@@ -21,7 +21,7 @@ struct ContentView: View {
                         StateDataCell(state: state)
                     })
             } //: LIST
-            .navigationBarTitle("State COVID Data")
+            .navigationBarTitle("All States")
             .onAppear(perform: {
                 trackingListVM.getData()
         })
