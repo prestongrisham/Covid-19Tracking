@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,12 @@
 		A9A7763A2597750500E8C709 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A776392597750500E8C709 /* ContentView.swift */; };
 		A9A7763C2597750500E8C709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A7763B2597750500E8C709 /* Assets.xcassets */; };
 		A9A7763F2597750500E8C709 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A7763E2597750500E8C709 /* Preview Assets.xcassets */; };
+		A9A776482597756C00E8C709 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A776472597756C00E8C709 /* Webservice.swift */; };
+		A9A7764B259775B100E8C709 /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A7764A259775B100E8C709 /* Tracking.swift */; };
+		A9A7764E259777C300E8C709 /* TrackingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A7764D259777C300E8C709 /* TrackingListViewModel.swift */; };
+		A9A77652259796C900E8C709 /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A77651259796C900E8C709 /* StateDetailView.swift */; };
+		A9A776562597AC3200E8C709 /* StateDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A776552597AC3200E8C709 /* StateDetailViewModel.swift */; };
+		A9A7765B2597D9B600E8C709 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A9A7765A2597D9B600E8C709 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,11 @@
 		A9A7763B2597750500E8C709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A7763E2597750500E8C709 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9A776402597750500E8C709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A776472597756C00E8C709 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		A9A7764A259775B100E8C709 /* Tracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
+		A9A7764D259777C300E8C709 /* TrackingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewModel.swift; sourceTree = "<group>"; };
+		A9A77651259796C900E8C709 /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
+		A9A776552597AC3200E8C709 /* StateDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A7765B2597D9B600E8C709 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +64,13 @@
 		A9A776362597750500E8C709 /* Covid-19Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				A9A7764A259775B100E8C709 /* Tracking.swift */,
 				A9A776372597750500E8C709 /* Covid_19TrackingApp.swift */,
 				A9A776392597750500E8C709 /* ContentView.swift */,
+				A9A77651259796C900E8C709 /* StateDetailView.swift */,
+				A9A7764D259777C300E8C709 /* TrackingListViewModel.swift */,
+				A9A776552597AC3200E8C709 /* StateDetailViewModel.swift */,
+				A9A776472597756C00E8C709 /* Webservice.swift */,
 				A9A7763B2597750500E8C709 /* Assets.xcassets */,
 				A9A776402597750500E8C709 /* Info.plist */,
 				A9A7763D2597750500E8C709 /* Preview Content */,
@@ -85,6 +102,9 @@
 			dependencies = (
 			);
 			name = "Covid-19Tracking";
+			packageProductDependencies = (
+				A9A7765A2597D9B600E8C709 /* SwiftUICharts */,
+			);
 			productName = "Covid-19Tracking";
 			productReference = A9A776342597750500E8C709 /* Covid-19Tracking.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +132,9 @@
 				Base,
 			);
 			mainGroup = A9A7762B2597750500E8C709;
+			packageReferences = (
+				A9A776592597D9B600E8C709 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = A9A776352597750500E8C709 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A776562597AC3200E8C709 /* StateDetailViewModel.swift in Sources */,
+				A9A7764B259775B100E8C709 /* Tracking.swift in Sources */,
+				A9A77652259796C900E8C709 /* StateDetailView.swift in Sources */,
 				A9A7763A2597750500E8C709 /* ContentView.swift in Sources */,
 				A9A776382597750500E8C709 /* Covid_19TrackingApp.swift in Sources */,
+				A9A7764E259777C300E8C709 /* TrackingListViewModel.swift in Sources */,
+				A9A776482597756C00E8C709 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9A776592597D9B600E8C709 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9A7765A2597D9B600E8C709 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9A776592597D9B600E8C709 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9A7762C2597750500E8C709 /* Project object */;
 }
